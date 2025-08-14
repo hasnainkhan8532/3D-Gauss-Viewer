@@ -782,6 +782,16 @@ async function main() {
         antialias: false,
     });
 
+    if (!gl) {
+        const msgEl = document.getElementById("message");
+        const spinnerEl = document.getElementById("spinner");
+        if (spinnerEl) spinnerEl.style.display = "none";
+        if (msgEl)
+            msgEl.innerText =
+                "WebGL2 context failed to initialize. Your browser/GPU may not support WebGL2 or it may be disabled. Try Chrome/Edge/Firefox, or enable WebGL2 in your browser settings.";
+        return;
+    }
+
     const vertexShader = gl.createShader(gl.VERTEX_SHADER);
     gl.shaderSource(vertexShader, vertexShaderSource);
     gl.compileShader(vertexShader);
