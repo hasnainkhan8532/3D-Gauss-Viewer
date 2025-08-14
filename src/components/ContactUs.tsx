@@ -289,7 +289,7 @@ const ContactUs = () => {
       </Content>
 
       <Footer>
-        © Designed with ❤️ by <FooterLink href="https://hasnainayaz.com" target="_blank" rel="noopener noreferrer">hasnainayaz.com</FooterLink> & team
+        © Designed with ❤️ by <FooterLink href="https://hasnainayaz.com" target="_blank" rel="noopener noreferrer">hasnainayaz.com</FooterLink>
       </Footer>
     </Container>
   );
